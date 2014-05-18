@@ -24,14 +24,13 @@ These who have a suffix "(until June 2nd)" are predictions for "Milestone 1" tas
 * Ciphers:
  * Playfair (until June 2nd)
  * Caeser (until June 2nd)
- * Rijndael (until June 2nd)
+ * L. Hill (until June 2nd)
  * RC6 (until June 2nd)
  * DES
  * 3DES
- * IDEA
+ * Feistel
  * RSA
  * MacEliece
- * Merkle–Hellman
  * Diffie–Hellman
 
 Undercover
