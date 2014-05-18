@@ -1,7 +1,7 @@
 NeedForCryptography
 ==========
 
-A cryptographic library for python and Crypto Chat demo.
+A cryptographic library for python.
 
 About NeedForCryptography
 ----------
@@ -10,7 +10,7 @@ NeedForCryptography is meant to be a cryptographic library. It will provide solu
 
 ==========
 
-Here is a list of things that will be implemented in the library. 
+Here is a list of things that will be implemented in the library. All of them will have unit tests. 
 These who have a suffix "(until June 2nd)" are predictions for "Milestone 1" task of the [Python](http://fmi.py-bg.net/) course at FMI:
 
 * Common problems:
@@ -29,7 +29,6 @@ These who have a suffix "(until June 2nd)" are predictions for "Milestone 1" tas
  * DES
  * 3DES
  * IDEA
- * DSA
  * RSA
  * MacEliece
  * Merkle–Hellman
@@ -41,7 +40,7 @@ Undercover
 About Undercover
 ----------
 
-Undercover will be a django web application which uses NeedForCryptography.
+Undercover will be a django web application(Crypto-Chat) which uses NeedForCryptography.
 Users will be able to:
 
 * Share their public keys
@@ -49,4 +48,3 @@ Users will be able to:
 * Decrypt messages
 * Enter their private key
 * Have an unique identification using "Electronic signature".
-
