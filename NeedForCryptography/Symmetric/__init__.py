@@ -1,0 +1,13 @@
+"""
+Symmetric algorithms
+--------------------
+
+Playfair
+========
+Description:
+    User passes a key which must contain all the letters that will be used
+    in the plain texts.
+=======
+"""
+
+__all__ = ['Playfair']
