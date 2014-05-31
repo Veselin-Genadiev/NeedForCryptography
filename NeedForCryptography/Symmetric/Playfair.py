@@ -20,7 +20,7 @@ class Playfair:
                         if self.__key.has_key(letter)])
 
         if len(text) % 2 == 1:
-            raise AttributeError("Text must be of even length!")
+            raise ValueError("Text must be of even length!")
 
         return ' '.join(self.__encrypt_pair(pair, offset)
                         for pair in findall(r'..', text))
@@ -57,7 +57,7 @@ class Playfair:
         else:
             return (0, col)
 
-    def __cyclic_shif_col(self, row, col, offset):
+    def __cyclic_shift_col(self, row, col, offset):
         if self.__key.has_value((row, col + offset)):
             return (row, col + offset)
         elif col == 0 and offset < 0:
@@ -83,10 +83,10 @@ class Playfair:
         first, second = pair
         first_row, first_col = self.__key.get_value(first)
         first_coordinates = \
-            self.__cyclic_shif_col(first_row, first_col, offset)
+            self.__cyclic_shift_col(first_row, first_col, offset)
         second_row, second_col = self.__key.get_value(second)
         second_coordinates = \
-            self.__cyclic_shif_col(second_row, second_col, offset)
+            self.__cyclic_shift_col(second_row, second_col, offset)
 
         return self.__key.get_key(first_coordinates) + \
             self.__key.get_key(second_coordinates)
