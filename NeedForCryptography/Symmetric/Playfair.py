@@ -11,7 +11,7 @@ class Playfair:
 
     def matrix_map(self, key):
         rows = int(ceil(len(key) ** 0.5))
-        letter_map = [(letter, (index / rows, index % rows)) for
+        letter_map = [(letter, (index // rows, index % rows)) for
                       index, letter in enumerate(key)]
         return DoubleDict(letter_map)
 

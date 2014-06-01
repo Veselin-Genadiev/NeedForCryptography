@@ -21,10 +21,10 @@ class PlayfairTests(unittest.TestCase):
                 self.assertEqual(cipher.encrypt(pair[0]), pair[1])
                 self.assertEqual(cipher.decrypt(pair[1]), pair[0])
 
-    '''
-    Raises error for text with odd length
-    '''
     def test_invalid_text(self):
+        '''
+        Raises ValueError for text with odd length
+        '''
         key = 'qazwsxedc'
         text = 'qwe'
         cipher = Playfair(key)

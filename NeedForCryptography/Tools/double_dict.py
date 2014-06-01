@@ -7,6 +7,14 @@ class DoubleDict:
             for key, value in items:
                 self[key] = value
 
+    @property
+    def keys(self):
+        return self.__dict.keys
+
+    @property
+    def values(self):
+        return self.__reverse_dict.keys
+
     def __getitem__(self, key):
         return self.get_value(key)
 
