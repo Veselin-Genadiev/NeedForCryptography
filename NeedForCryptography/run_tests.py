@@ -1,5 +1,5 @@
-from Tests.PlayfairTests import PlayfairTests
-from Tests.CaeserTests import CaeserTests
+from Tests.playfair import PlayfairTests
+from Tests.caeser import CaeserTests
 import unittest
 
 
