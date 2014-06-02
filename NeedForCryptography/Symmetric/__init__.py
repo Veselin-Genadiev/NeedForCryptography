@@ -10,4 +10,4 @@ Description:
 =======
 """
 
-__all__ = ['Playfair']
+__all__ = ['playfair', 'caeser', 'rc6', 'hill']
