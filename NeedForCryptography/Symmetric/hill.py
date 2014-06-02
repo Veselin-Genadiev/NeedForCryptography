@@ -1,6 +1,7 @@
 from string import ascii_uppercase
 from collections import OrderedDict
-from numpy.linalg import inv, det, dot
+from numpy.linalg import inv, det
+from numpy import dot
 
 
 class Hill:
@@ -16,7 +17,7 @@ class Hill:
 
         self.__alphabet = ''.join(list(OrderedDict.fromkeys(alphabet)))
         self.__modulo = len(self.__alphabet)
-        self.__matrix = [map(lambda col: col % self.__modulo, row)
+        self.__matrix = [list(map(lambda col: col % self.__modulo, row))
                          for row in matrix]
 
     def encrypt(self, text, encryption=True):
@@ -24,11 +25,13 @@ class Hill:
         matrix = self.__matrix
 
         if not encryption:
-            matrix = inv(self.__matrix)
+            matrix = (inv(self.__matrix) * det(matrix)).tolist()
+            matrix = [list(map(lambda col: int(col) % 26, row))
+                      for row in matrix]
 
-        encrypted_vector = dot(matrix, vector)
-        encrypted_vector = [map(lambda col: col % self.__modulo, row)
-                            for row in encrypted_vector]
+        encrypted_vector = dot(matrix, vector).tolist()
+        encrypted_vector = [x % self.__modulo for x in encrypted_vector]
+
         encrypted_text = self.__textify(encrypted_vector)
         return encrypted_text
 

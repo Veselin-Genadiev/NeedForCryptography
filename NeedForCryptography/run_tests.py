@@ -1,5 +1,6 @@
 from Tests.playfair import PlayfairTests
 from Tests.caeser import CaeserTests
+from Tests.hill import HillTests
 import unittest
 
 
