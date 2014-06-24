@@ -1,5 +1,5 @@
-import itertools
 from math import sqrt
+from random import SystemRandom
 
 
 def is_prime(number):
@@ -13,26 +13,48 @@ def filter_divisors(number, numbers):
 
 
 def primes():
-    candidates = itertools.count(2)
+    found = {}
+    prime = 2
 
     while True:
-        prime = next(candidates)
-        candidates = filter_divisors(prime, candidates)
-        yield prime
+        if prime not in found:
+            yield prime
+            found[prime * prime] = [prime]
+        else:
+            for p in found[prime]:
+                found.setdefault(p + prime, []).append(p)
+
+            del found[prime]
+
+        prime += 1
 
 
-def fermat_number(prime):
-    if not is_prime(prime):
-        raise ValueError('Number is not prime')
-
-    return 2 ** (2 ** prime) + 1
+def marsenne_number(number):
+    return 2 ** number - 1
 
 
-def marsene_prime(prime):
-    if not is_prime(prime):
-        raise ValueError('Number is not prime')
+def is_marsenne_prime(prime):
+    s = 4
+    marsenne = 2 ** prime - 1
 
-    return 2 ** prime - 1
+    for _ in range(prime - 2):
+        s = (s ** 2 - 2) % marsenne
+
+    return s == 0
+
+
+def random_prime():
+    random = SystemRandom()
+    prime_generator = iter(primes())
+    prime_number = next(prime_generator)
+
+    for _ in range(random.randrange(42)):
+        prime_number = next(prime_generator)
+
+    while not is_marsenne_prime(prime_number):
+        prime_number = next(prime_generator)
+
+    return marsenne_number(prime_number)
 
 
 def gcd(a, b):
@@ -40,6 +62,10 @@ def gcd(a, b):
         return a
 
     return gcd(b, a % b)
+
+
+def factor_primes(number):
+    return [factor for factor in range(2, number) if is_prime(factor)]
 
 
 def dixon_factor(number):
