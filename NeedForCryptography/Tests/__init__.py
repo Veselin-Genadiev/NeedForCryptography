@@ -3,4 +3,4 @@ Tests for all  Ciphers and Tools.
 '''
 
 
-__all__ = ['Playfair', 'CaeserTests']
+__all__ = ['playfair', 'caeser', 'feistel', 'hill', 'rsa']

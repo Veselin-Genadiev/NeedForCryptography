@@ -57,6 +57,16 @@ def random_prime():
     return marsenne_number(prime_number)
 
 
+def random_prime_pair():
+    first = random_prime()
+    second = random_prime()
+
+    while first == second:
+        second = random_prime()
+
+    return (first, second)
+
+
 def gcd(a, b):
     if a % b == 0:
         return a
