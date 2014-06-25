@@ -1,4 +1,4 @@
-from Symmetric.hill import Hill
+from symmetric.hill import Hill
 import unittest
 
 

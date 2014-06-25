@@ -1,4 +1,4 @@
-from Symmetric.playfair import Playfair
+from symmetric.playfair import Playfair
 import unittest
 
 
