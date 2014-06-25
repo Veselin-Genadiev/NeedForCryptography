@@ -24,3 +24,9 @@ class RSATests(unittest.TestCase):
                 self.assertEqual(RSA.encrypt(cipher.public_key, pair[0]),
                                  pair[1])
                 self.assertEqual(cipher.decrypt(pair[1]), pair[0])
+
+    def test_public_key_not_modulus_coprime(self):
+        with self.assertRaises(ValueError) as ve:
+            RSA(61, 53, 33)
+
+        self.assertEqual(ve.expected, ValueError)
