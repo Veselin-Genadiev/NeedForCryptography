@@ -6,6 +6,11 @@ from itertools import count
 
 
 class Playfair:
+    '''
+    To use the cipher simply pass a key which is a plaintext. Please make sure
+    that the key is of length which is a square of some number and has only
+    unique characters. Otherwise the cipher will be much less secure.
+    '''
     def __init__(self, key):
         self.__key = self.matrix_map(''.join(list(OrderedDict.fromkeys(key))))
 
