@@ -1,3 +1,4 @@
+from tools.utilities import gcd
 from math import sqrt
 from random import SystemRandom
 
@@ -67,13 +68,6 @@ def random_prime_pair():
     return (first, second)
 
 
-def gcd(a, b):
-    if a % b == 0:
-        return a
-
-    return gcd(b, a % b)
-
-
 def factor_primes(number):
     return [factor for factor in range(2, number) if is_prime(factor)]
 
@@ -92,10 +86,10 @@ def dixon_factor(number):
             if lhs == rhs:
                 pairs.append([i, base[j]])
 
-    for i in range(len(pairs)):
-        factor = gcd(pairs[i][0] - pairs[i][1], number)
-
-        if(factor != 1):
-            factors.append(factor)
+    for l, r in pairs:
+        if l != r:
+            factor = gcd(l - r, number)
+            if(factor > 1):
+                factors.append(factor)
 
     return factors
