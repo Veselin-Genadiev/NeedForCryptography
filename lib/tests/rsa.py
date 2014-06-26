@@ -29,4 +29,4 @@ class RSATests(unittest.TestCase):
         with self.assertRaises(ValueError) as ve:
             RSA(61, 53, 33)
 
-        self.assertEqual(ve.expected, ValueError)
+        self.assertEqual(ValueError, type(ve.exception))

@@ -1,1 +1,1 @@
-__all__ = ['rsa']
+__all__ = ['rsa', 'diffie_hellman_exchange']
