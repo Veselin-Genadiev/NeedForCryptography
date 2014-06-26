@@ -1,3 +1,6 @@
+from random import SystemRandom
+
+
 def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
@@ -12,3 +15,7 @@ def modinv(a, m):
         raise ValueError('modular inverse does not exist')
     else:
         return x % m
+
+
+def get_random_bit():
+    return SystemRandom().getrandbits(1)

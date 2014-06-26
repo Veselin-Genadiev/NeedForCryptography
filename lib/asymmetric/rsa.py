@@ -1,4 +1,4 @@
-from tools.arithmetics import modinv
+from tools.utilities import modinv
 
 
 class RSA:

@@ -1,2 +1,2 @@
-__all__ = ['doubledict', 'arithmetics', 'discretelog',
+__all__ = ['doubledict', 'utilities', 'discretelog',
            'el_gamal_signature', 'primes']
