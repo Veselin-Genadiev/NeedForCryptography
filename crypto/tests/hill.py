@@ -1,4 +1,4 @@
-from symmetric.hill import Hill
+from crypto.symmetric.hill import Hill
 import unittest
 
 

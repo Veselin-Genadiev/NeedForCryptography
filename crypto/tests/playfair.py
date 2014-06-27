@@ -1,4 +1,4 @@
-from symmetric.playfair import Playfair
+from crypto.symmetric.playfair import Playfair
 import unittest
 
 

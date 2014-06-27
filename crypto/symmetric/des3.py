@@ -1,4 +1,4 @@
-import symmetric.des as DES
+import crypto.symmetric.des as DES
 
 
 class DES3:

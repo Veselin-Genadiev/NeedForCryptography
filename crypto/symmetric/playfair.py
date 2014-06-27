@@ -1,5 +1,5 @@
 from math import ceil
-from tools.doubledict import DoubleDict
+from crypto.tools.doubledict import DoubleDict
 from re import findall
 from collections import OrderedDict
 from itertools import count

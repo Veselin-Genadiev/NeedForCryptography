@@ -1,4 +1,4 @@
-from tools.utilities import xgcd, phi
+from crypto.tools.utilities import xgcd, phi
 
 
 def inv(x, p):

@@ -1,5 +1,5 @@
-from symmetric.des3 import DES3
-from symmetric.des import DES
+from crypto.symmetric.des3 import DES3
+from crypto.symmetric.des import DES
 import unittest
 
 

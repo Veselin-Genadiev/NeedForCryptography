@@ -1,4 +1,4 @@
-from asymmetric.diffie_hellman_exchange import DiffieHellmanExchange
+from crypto.asymmetric.diffie_hellman_exchange import DiffieHellmanExchange
 import unittest
 
 

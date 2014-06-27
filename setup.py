@@ -2,12 +2,13 @@ from distutils.core import setup
 
 
 setup_info = {'name': 'NeedForCryptography',
+              'version': '1.05',
               'description': 'Python cryptographic tools and ciphers',
               'author': 'Veselin Genadiev',
               'author_email': 'genadiev.veselin@gmail.com',
-              'url': 'https://www.facebook.com/genadiev.veselin',
-              'packages': ['crypto'],
-              'package_dir': {'crypto': 'crypto'},
+              'url': 'https://github.com/Veselin-Genadiev/NeedForCryptography',
+              'packages': ['crypto', 'crypto.tools', 'crypto.symmetric',
+                           'crypto.asymmetric'],
               'classifiers': [
                   'Development Status :: 4 - Beta',
                   'Environment :: Console',
@@ -18,7 +19,6 @@ setup_info = {'name': 'NeedForCryptography',
                   'License :: OSI Approved ::'
                   ' Python Software Foundation License',
                   'Operating System :: MacOS :: MacOS X',
-                  'Operating System :: Microsoft :: Windows',
                   'Operating System :: POSIX',
                   'Programming Language :: Python',
                   'Topic :: Communications :: Email',
@@ -26,6 +26,5 @@ setup_info = {'name': 'NeedForCryptography',
                   'Topic :: Software Development :: Bug Tracking',
               ],
               }
-
 
 setup(**setup_info)
