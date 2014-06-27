@@ -6,9 +6,11 @@ setup_info = {'name': 'NeedForCryptography',
               'author': 'Veselin Genadiev',
               'author_email': 'genadiev.veselin@gmail.com',
               'url': 'https://www.facebook.com/genadiev.veselin',
-              'packages': ['lib', 'lib.symmetric, lib.asymmetric',
-                           'lib.tools', 'lib.tests'],
-              'package_dir': {'lib': 'lib'},
+              'packages': ['symmetric, asymmetric', 'tools', 'tests'],
+              'package_dir': {'symmetric': 'lib/symmetric',
+                              'asymmetric': 'lib/asymmetric',
+                              'tools': 'lib/tools',
+                              'tests': 'lib/tests'},
               'classifiers': [
                   'Development Status :: 4 - Beta',
                   'Environment :: Console',
@@ -29,4 +31,4 @@ setup_info = {'name': 'NeedForCryptography',
               }
 
 
-setup(setup_info)
+setup(**setup_info)
