@@ -1,4 +1,4 @@
-from crypto.tools.el_gamal_signature import ElGamalSignature
+from tools.el_gamal_signature import ElGamalSignature
 import unittest
 
 

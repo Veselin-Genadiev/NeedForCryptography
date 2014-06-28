@@ -1,4 +1,4 @@
-from crypto.symmetric.feistel import Feistel
+from symmetric.feistel import Feistel
 import unittest
 
 

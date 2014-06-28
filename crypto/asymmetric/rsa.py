@@ -1,4 +1,4 @@
-from crypto.tools.utilities import modinv
+from tools.utilities import modinv
 
 
 class RSA:

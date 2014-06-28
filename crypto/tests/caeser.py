@@ -1,5 +1,5 @@
 import unittest
-from crypto.symmetric.caeser import Caeser
+from symmetric.caeser import Caeser
 
 
 class CaeserTests(unittest.TestCase):

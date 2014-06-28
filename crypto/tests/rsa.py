@@ -1,4 +1,4 @@
-from crypto.asymmetric.rsa import RSA
+from asymmetric.rsa import RSA
 import unittest
 
 

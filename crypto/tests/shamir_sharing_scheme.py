@@ -1,4 +1,4 @@
-from crypto.tools.shamir_sharing_scheme import ShamirSharingScheme
+from tools.shamir_sharing_scheme import ShamirSharingScheme
 from itertools import combinations
 import unittest
 

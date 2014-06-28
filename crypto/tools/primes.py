@@ -1,4 +1,4 @@
-from crypto.tools.utilities import gcd
+from tools.utilities import gcd
 from math import sqrt
 from random import SystemRandom
 
